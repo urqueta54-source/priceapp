@@ -98,7 +98,7 @@ jobs:
           curl -sf -X POST http://localhost:8000/predict \
             -H "Content-Type: application/json" \
             -d '{"overall_qual": 7, "gr_liv_area": 1710, "total_bsmt_sf": 856, "garage_cars": 2, "full_bath": 2, "year_built": 2003}'
-            | tee /tmp/predict_response.json
+            tee /tmp/predict_response.json
           grep -q "predicted_price" /tmp/predict_response.json
       - name: Dump container logs on failure
         if: failure()
