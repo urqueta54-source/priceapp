@@ -234,7 +234,9 @@ story.append(
     )
 )
 
-metric_cell_style = ParagraphStyle(name="MetricCell", fontSize=8.7, leading=11, fontName="Helvetica")
+metric_cell_style = ParagraphStyle(
+    name="MetricCell", fontSize=8.7, leading=11, fontName="Helvetica"
+)
 metrics_data = [
     ["Métrica", "Valor", "Interpretación"],
     [
@@ -300,7 +302,13 @@ story.append(
     )
 )
 story.extend(
-    figure(FIG_CI, 15.875, 1397, 158, "Figura 2. Ejecución del pipeline de CI/CD ante un push al repositorio.")
+    figure(
+        FIG_CI,
+        15.875,
+        1397,
+        158,
+        "Figura 2. Ejecución del pipeline de CI/CD ante un push al repositorio.",
+    )
 )
 story.append(
     bullets(
@@ -365,7 +373,13 @@ story.append(
     )
 )
 story.extend(
-    figure(FIG_PREDICT, 10.59, 1050, 467, "Figura 4. Ejemplo de request body para el endpoint POST /predict.")
+    figure(
+        FIG_PREDICT,
+        10.59,
+        1050,
+        467,
+        "Figura 4. Ejemplo de request body para el endpoint POST /predict.",
+    )
 )
 story.append(
     Paragraph(
@@ -449,10 +463,31 @@ story.append(
 )
 features_data = [
     ["Feature", "Columna orig.", "Descripción", "Tipo", "Rango válido", "Corr."],
-    ["overall_qual", "OverallQual", "Calidad general de materiales y acabados", "int", "1 - 10", "0.79"],
-    ["gr_liv_area", "GrLivArea", "Superficie habitable sobre el suelo (sqft)", "float", "> 0, <= 15.000", "0.71"],
+    [
+        "overall_qual",
+        "OverallQual",
+        "Calidad general de materiales y acabados",
+        "int",
+        "1 - 10",
+        "0.79",
+    ],
+    [
+        "gr_liv_area",
+        "GrLivArea",
+        "Superficie habitable sobre el suelo (sqft)",
+        "float",
+        "> 0, <= 15.000",
+        "0.71",
+    ],
     ["garage_cars", "GarageCars", "Capacidad del garaje (n° de autos)", "int", "0 - 10", "0.64"],
-    ["total_bsmt_sf", "TotalBsmtSF", "Superficie total del sótano (sqft)", "float", ">= 0, <= 15.000", "0.61"],
+    [
+        "total_bsmt_sf",
+        "TotalBsmtSF",
+        "Superficie total del sótano (sqft)",
+        "float",
+        ">= 0, <= 15.000",
+        "0.61",
+    ],
     ["full_bath", "FullBath", "Baños completos sobre el suelo", "int", "0 - 10", "0.56"],
     ["year_built", "YearBuilt", "Año de construcción original", "int", "1800 - 2026", "0.52"],
     ["price (target)", "SalePrice", "Precio de venta (USD)", "float", "—", "—"],
@@ -583,7 +618,11 @@ story.append(
         styles["Body"],
     )
 )
-story.append(Paragraph("python src/train.py --data data/housing_train_raw.csv --out artifacts", styles["CodeBlock"]))
+story.append(
+    Paragraph(
+        "python src/train.py --data data/housing_train_raw.csv --out artifacts", styles["CodeBlock"]
+    )
+)
 story.append(
     Paragraph(
         "Todos los resultados son deterministas gracias al uso de random_state=42 en las operaciones "
