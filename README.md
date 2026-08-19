@@ -1,8 +1,8 @@
 # House Pricing API — MLOps end-to-end
 
-**🔗 Servicio en producción:** https://mlops-pricing-app.onrender.com
-**📄 Docs interactivos:** https://mlops-pricing-app.onrender.com/docs
-**❤️ Health check:** https://priceapp-299n.onrender.com/docs
+**Servicio en producción:** https://mlops-pricing-app.onrender.com
+* Docs interactivos:** https://mlops-pricing-app.onrender.com/docs
+* Health check:** https://priceapp-299n.onrender.com/docs
 
 > Desplegado en **Render** (plan Free). El plan gratuito "duerme" el servicio
 > tras ~15 min de inactividad — el primer request tras eso puede tardar
